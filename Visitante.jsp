@@ -23,7 +23,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome visitante</title>
+        <title>Bienvenido visitante</title>
     </head>
     <body>
         <h1>Hola <%=visitorName%></h1>
