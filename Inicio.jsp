@@ -1,10 +1,10 @@
 <%-- 
     Document   : Inicio
-    Created on : May 13, 2024, 11:11:49 PM
-    Author     : Alyta
+    Created on : Jun 13, 2024, 01:40:49 PM
+    Author     : Bg
 --%>
 <%
-    String cookieName = "visitorName";
+    String cookieName = "register";
     Cookie[] cookies = request.getCookies();
     boolean existeCookie = false;
     for(Cookie cookie : cookies){
@@ -13,7 +13,7 @@
         }
     }
     if(existeCookie){
-        response.sendRedirect("Visitante.jsp");
+        response.sendRedirect("register.php");
     }
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -21,15 +21,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Bienvenido</title>
+        <title> Register </title>
     </head>
     <body>
-        <h1>Hola</h1>
-        <p>Veo que es tu primera vez en el sitio</p>
-        <form action="<%= getServletContext().getContextPath() %>/Inicio" method="POST">
-            <P>
-                Como te llamas? 
-                <input type="text" name="nombre"/>
+        <h1></h1>
+        <p> </p>
+        <form action="<%= getServletContext().getContextPath() %>/Login" method="POST">
+            <P> 
+                <input type="text" name="usuario"/>
+                <input type="submit" value="Responder"/>
+                <input type="text" name="correo"/>
+                <input type="submit" value="Responder"/>
+                <input type="text" name="password"/>
+                <input type="submit" value="Responder"/>
+                <input type="text" name="confirmpassword"/>
                 <input type="submit" value="Responder"/>
             </P>
         </form>
